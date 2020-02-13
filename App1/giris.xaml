@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.giris">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Dil Seçiniz"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Picker Title=" Diller"
+                    TextColor="Purple"
+                    x:Name="SelectLang"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Türkçe</x:String>
+                    <x:String>English</x:String>
+                    <x:String>Pусский</x:String>
+                </x:Array>    
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Başla"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="baslat"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
